@@ -44,6 +44,9 @@ with core.registered.skip_registration():
   # (e.g. DummyMnist,...).
   from tensorflow_datasets import testing
 
+# We disable download_and_prepare for Python2
+core.dataset_builder.disable_py2_download_and_prepare()
+
 
 __all__ = [
     "core",
